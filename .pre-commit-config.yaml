@@ -1,0 +1,23 @@
+---
+repos:
+  - repo: git://github.com/pre-commit/pre-commit-hooks
+    rev: v2.5.0
+    hooks:
+      - id: check-json
+      - id: trailing-whitespace
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-executables-have-shebangs
+
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 2.0.0
+    hooks:
+      - id: markdownlint
+        args: [--rules, "~MD013,~MD034"]
+      - id: shellcheck
+
+  - repo: git://github.com/Lucas-C/pre-commit-hooks
+    sha: v1.1.4
+    hooks:
+      - id: remove-tabs
