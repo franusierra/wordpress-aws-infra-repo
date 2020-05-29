@@ -34,5 +34,5 @@ resource "aws_iam_policy" "policy_ssm_wordpress_db" {
 resource "aws_iam_role_policy_attachment" "attachment_policy_ssm" {
   role       = "${aws_iam_role.ecs_tasks_execution_role.name}"
   policy_arn = aws_iam_policy.policy_ssm_wordpress_db.arn
-  
+
 }
